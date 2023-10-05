@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>OpenWeahter App</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar nav-bg">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Weather Forecast</span>
+
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active navlink-text" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navlink-text" href="#">Hourly Forecast</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navlink-text" href="#">Air Quality</a>
+          </li>
+        </ul>
+
+        <form class="input_box" action="/submit" method="post">
+          <input
+            class="no-border"
+            type="text"
+            name="cityName"
+            placeholder="Search City"
+          />
+          <button class="icon search_btn no-border">
+            <img src="./assets/icons/magnifying-glass-solid.svg" alt="" />
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- Page -->
+    <section id="home" class="page">
+      <div class="container-fluid">
+        <div class="row stats_container">
+          <!-- Card 1 -->
+          <div class="col-sm-5 rounded stats_box">
+            <h4>Today's Forecast</h4>
+            <div class="location">
+              <img
+                class="icon"
+                src="./assets/icons/location-dot-solid.svg"
+                alt=""
+              />
+              <h2><%= cityName %></h2>
+            </div>
+
+            <div class="weather-icon">
+              <img src="<%= icon %>" alt="">
+            </div>
+            <div class="description">
+              <h3><%= description %></h3>
+            </div>
+
+            <div class="stats">
+              <div class="temp">
+                <p>Temp</p>
+                <h4><strong>23 °C</strong></h4>
+              </div>
+              <div class="stats-border"></div>
+              <div class="wind">
+                <p>Wind</p>
+                <h4><strong>1.88 Kph</strong></h4>
+              </div>
+              <div class="stats-border"></div>
+              <div class="humidity">
+                <p>Humidity</p>
+                <h4><strong>80%</strong></h4>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-sm-5 rounded stats_box box">
+            <h4>Current Weather</h4>
+
+            <div class="currentCityStats">
+              <h2><%= cityName %></h2>
+              <div class="date-time">
+                <p class="date">Sunday, Sep 23</p>
+                <p class="time">00:00 AM</p>
+              </div>
+            </div>
+
+            <div class="currentStats-container">
+              <div class="currentStat">
+                <p class="currentTemp">Temperature:</p>
+                <span>
+                  <p><%= currentTemp %>°C Feels like <%= tempFeels %> °C</p>
+                </span>
+              </div>
+              <div class="currentStat">
+                <p class="pressure">Pressure: </p>
+                <span>
+                  <p><%= pressure %> mb</p>
+                </span>
+              </div>
+              <div class="currentStat">
+                <p class="visibility">Visibility:</p>
+                <span>
+                  <p><%= visibility %> m</p>
+                </span>
+              </div>
+              <div class="currentStat">
+                <p class="windSpeed">Wind Speed:</p>
+                <span>
+                  <p><%= windSpeed %> m/s</p>
+                </span>
+              </div>
+            </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOTSTRAP JS -->
+    <script
+      src="https://kit.fontawesome.com/3d85c60b8c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

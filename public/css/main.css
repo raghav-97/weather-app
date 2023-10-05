@@ -1,0 +1,129 @@
+.navbar-brand:hover {
+  cursor: pointer;
+}
+
+.page {
+  padding: 7% 0;
+}
+
+form input {
+  padding: 5px;
+  border-radius: 7px 0 0 7px;
+  outline: none;
+}
+
+form button {
+  border-radius: 0 7px 7px 0;
+}
+
+.input_box {
+  align-items: center;
+  display: flex;
+}
+
+.search_btn {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  width: 30px;
+  height: 34px;
+}
+
+.stats_container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.stats_box {
+  background: var(--card-color);
+  padding: 20px;
+  width: 500px;
+}
+
+.stats_box h4 {
+  font-size: 20px;
+  padding: 8px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+}
+
+.location h2 {
+  margin: 0;
+}
+
+.location .icon {
+  margin: 0 8px;
+}
+
+.stats_box .weather-icon {
+  display: flex;
+  justify-content: center;
+  height: 180px;
+  margin: 0 auto;
+  width: 180px;
+}
+
+.description {
+  margin: 12px 0;
+  text-align: center;
+}
+
+.stats-border {
+  height: 50px;
+  border-left: 2px solid;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.stats p {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* CARD 2 */
+.currentCityStats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.date-time {
+  display: flex;
+  align-items: center;
+}
+
+.date-time p {
+  margin-bottom: 0;
+}
+
+.date {
+  padding-right: 8px;
+}
+.time {
+  padding-left: 8px;
+}
+
+.currentCityStats {
+  padding: 0 15px;
+}
+
+.currentStat {
+  display: flex;
+  justify-content: space-between;
+}
+
+.currentStats-container {
+  margin: 0 auto;
+  padding-top: 50px;
+  width: 370px;
+}

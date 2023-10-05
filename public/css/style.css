@@ -1,0 +1,23 @@
+:root {
+  --card-color: #00ADB5;
+  --navbar-bg: #393E46;
+  --navlink-text: #000000;
+  --bg: #EEEEEE;
+}
+
+#home {
+  background: var(--bg);
+  height: 100vh;
+}
+
+.nav-bg {
+  background: var(--navbar-bg);
+}
+
+.navlink-text {
+  color: var(--navlink-text);
+}
+
+.no-border {
+  border: none;
+}
